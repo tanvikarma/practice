@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+    <button onclick="f1()">click me</button>
+    <div onmouseover="f2()" id="box">hello</div>
+    <div onmouseout="f3()" id="box2">out</div>
+    <button id="btn">Click for open my msg</button>
+    <h1 id="txt1"></h1>
+    <h1 id="txt2"></h1>
+    <script>
+        function f1(){
+            alert("hello")
+        }
+        function f2(){
+            let container = document.getElementById("box");
+            container.style.background = 'red';
+            container.style.width = '250px';
+            container.style.height = '259px'
+        }
+        function f3(){
+            let box = document.getElementById('box2');
+            box.style.background = 'blue';
+            box.style.width = '250px';
+            box.style.height = '259px'
+        }
+
+        let btn_element = document.getElementById("btn");
+   
+        btn_element.addEventListener("click", () => {
+            document.getElementById("txt1").innerHTML = "Hello There!";
+        })
+    
+        btn_element.addEventListener("click", () => {
+            document.getElementById("txt2").innerHTML = "my name is tanvi";
+        });
+    </script>
+</body>
+</html>
